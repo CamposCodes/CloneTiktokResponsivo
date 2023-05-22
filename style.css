@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* Define rolagem vertical */
+    scroll-snap-type: y mandatory;
+    /* Fonte  */
+    font-family: 'League Spartan', sans-serif;
+}
+
+body {
+    color: white;
+    background: black;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.app__videos {
+    margin: 1em 0;
+    position: relative;
+    height: 90vh;
+    background-color: white;
+    overflow: scroll;
+    width: 275px;
+    scroll-snap-type: y mandatory;
+    border-radius: 20px;
+}
+
+.video {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background: black;
+    scroll-snap-align: start;
+}
+
+.video__player {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.videoSidebar {
+    position: absolute;
+    top: 40%;
+    right: 5px;
+}
+
+.videoSidebar .material-icons {
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.videoSidebar .material-icons:hover {
+    color: #d9d8d8;
+}
+
+.videoSidebar__button {
+    padding: 15px 0;
+    text-align: center;
+}
+
+.videoSidebar__button p {
+    font-size: 12px;
+}
+.videoFooter__description {
+    padding-bottom: 20px;
+}
+
+.videoFooter {
+    position: relative;
+    bottom: 90px;
+    margin-left: 10px;
+    color: white;
+    display: flex;
+    width: 100%;
+}
+
+.videoFooter__text {
+    flex: 1;
+    font-size: 12px;
+}
+
+.videoFooter__text h3 {
+    padding-bottom: 8px;
+}
+
+.videoFooter__text p {
+    width: 52%;
+    color: #d9d8d8;
+}
+
+.videoFooter__icon {
+    position: absolute;
+    margin-left: -5px;
+    margin-bottom: 5px;
+}
+.videoFooter__icon:hover {
+    background: #69696971;
+    border-radius: 5px;
+}
+
+.videoFooter__ticker {
+    width: 500px;
+    display: flex;
+    align-items: center;
+}
+
+.videoFooter__ticker marquee {
+    height: fit-content;
+    margin-left: 20px;
+    width: 41%;
+    color: #c5c5c5;
+}
+
+.videoFooter__record {
+    animation: spinTheRecord infinite 5s linear;
+    height: 35px;
+    filter: invert(1);
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+
+@keyframes spinTheRecord {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 425px) {
+    .app__videos {
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        border-radius: 0;
+    }
+
+    .videoFooter {
+        bottom: 110px;
+    }
+    .videoFooter__ticker marquee {
+        width: 60%;
+    }
+
+    .videoFooter__text h3 {
+        font-size: 25px;
+    }
+
+    .videoFooter__text p {
+        width: 70%;
+        font-size: 18px;
+    }
+    .videoSidebar {
+        top: 200px;
+    }
+    .videoSidebar .material-icons {
+        font-size: 30px;
+    }
+
+    .videoSidebar__button {
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    .videoSidebar__button p {
+        font-size: 18px;
+    }
+}
+
+/* Barra de rolagem  */
+body::-webkit-scrollbar {
+    width: 10px; /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background: black; /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: white; /* color of the scroll thumb */
+    border-radius: 10px; /* roundness of the scroll thumb */
+}
+
+.app__videos::-webkit-scrollbar {
+    display: none;
+}
+
+.app__videos {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
