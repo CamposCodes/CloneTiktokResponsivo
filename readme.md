@@ -5,4 +5,4 @@
    O objetivo principal deste projeto é treinar CSS, HTML, JavaScript e explorar o desenvolvimento responsivo;
 
 ##### Ao clicar no link, você será direcionado para a aplicação web, onde poderá explorar a interface do clone do Tiktok e verificar como as funcionalidades foram implementadas.
-</t> Acesse o link para explorar a aplicação: https://camposcodes.github.io/CloneTiktokResponsivo/
+Acesse o link para explorar a aplicação: https://camposcodes.github.io/CloneTiktokResponsivo/
