@@ -1,4 +1,4 @@
-# Clone Tiktok Responsivo
+### Clone Tiktok Responsivo
 
  - Este clone do Tiktok é uma aplicação web responsiva desenvolvida durante o Bootcamp de Imersão FullStack da Codi Academy, um curso parceiro da UFJF (Universidade Federal de Juiz de Fora);
 
